@@ -2,5 +2,12 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <EnableDynamicLoading>true</EnableDynamicLoading>
+        <RollForward>LatestMajor</RollForward>
     </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="GitInfo" Version="3.6.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
 </Project>

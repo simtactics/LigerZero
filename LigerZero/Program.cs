@@ -1,13 +1,22 @@
 using Godot;
+using LigerZero;
 using Engine = twodog.Engine;
 
 // Create and start the Godot engine with your project
-using var engine = new Engine("LigerZero", Engine.ResolveProjectDir());
+const string version = $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
+const string project = "LigerZero";
+using var engine = new Engine(project, Engine.ResolveProjectDir());
 using var godot = engine.Start();
 
 // Load your main scene
 var scene = GD.Load<PackedScene>("res://main.tscn");
-engine.Tree.Root.AddChild(scene.Instantiate());
+var tree = engine.Tree.Root;
+tree.AddChild(scene.Instantiate());
+
+#if DEBUG
+var window = tree.GetWindow();
+window.Title = $"{project} {version}";
+#endif
 
 GD.Print("2dog is running! Close window or press 'Q' to quit.");
 Console.WriteLine("Press 'Q' to quit.");
@@ -17,8 +26,8 @@ while (!godot.Iteration())
 {
     if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
         break;
-    
-    // Your per-frame logic here
+
+    var findTSO = new FindTSO();
 }
 
 Console.WriteLine("Shutting down...");

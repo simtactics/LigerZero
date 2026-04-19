@@ -4,6 +4,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <RollForward>LatestMajor</RollForward>
     </PropertyGroup>
 
     <!-- 2dog packages -->
