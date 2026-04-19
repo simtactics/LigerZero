@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LigerZero.Godot/LigerZero.Godot.csproj" />
+  <Project Path="LigerZero.Tests/LigerZero.Tests.csproj" />
+  <Project Path="LigerZero/LigerZero.csproj" />
+</Solution>
