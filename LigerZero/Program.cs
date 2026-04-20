@@ -1,29 +1,23 @@
-using Engine = twodog.Engine;
+using CommandLine;
 
-// Create and start the Godot engine with your project
 const string version =
     $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
+
+// Create and start the Godot engine with your project
 const string project = "LigerZero";
 using var engine = new Engine(project, Engine.ResolveProjectDir());
 using var godot = engine.Start();
+var scene = new SceneManger(engine, version);
 
-// Load main scene
-var game = GD.Load<PackedScene>("res://main.tscn");
-engine.Tree.Root.AddChild(game.Instantiate());
-
-var scene = engine.Tree.CurrentScene;
-var verLbl = scene.GetNode<Label>("VerLbl");
-var alertWin = scene.GetNode<Window>("AlertWin");
-var win = scene.GetWindow();
-var cfg = new LZConfig();
-
-// Init scene
-verLbl.Text = version;
-win.Size = new Vector2I(cfg.Height, cfg.Width); // I might have mixed up the X Y coordinates on this one.
-
-
-// Path resolver need fixing, but at least one things works xD
-if (!File.Exists(cfg.InstallDir)) alertWin.Show();
+Parser.Default.ParseArguments(args).WithParsed<Options>(o =>
+{
+    switch (o.Mode)
+    {
+        default:
+            scene.Login();
+            break;
+    }
+});
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())

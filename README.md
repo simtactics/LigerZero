@@ -1,6 +1,6 @@
 # Project Liger Zero
 
-LigerZero (or TSO LZ) is a Sims Online Client based on Godot and powered by 2dog.
+Liger Zero (or TSO LZ) is a Sims Online Client based on Godot that's powered by 2dog.
 
 ## To-do
 

@@ -1,0 +1,226 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Generated Schema",
+    "type": "object",
+    "properties": {
+        "house": {
+            "type": "object",
+            "properties": {
+                "size": {
+                    "type": "string",
+                    "examples": [
+                        "64"
+                    ]
+                },
+                "category": {
+                    "type": "string",
+                    "examples": [
+                        "0"
+                    ]
+                },
+                "world": {
+                    "type": "object",
+                    "properties": {
+                        "floors": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "level": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "x": {
+                                        "type": "string",
+                                        "examples": [
+                                            "1"
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "string",
+                                        "examples": [
+                                            "58"
+                                        ]
+                                    },
+                                    "value": {
+                                        "type": "string",
+                                        "examples": [
+                                            "9"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "level",
+                                    "x",
+                                    "y",
+                                    "value"
+                                ]
+                            }
+                        },
+                        "walls": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "Segments": {
+                                        "type": "string",
+                                        "examples": [
+                                            "BottomRight"
+                                        ]
+                                    },
+                                    "level": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "x": {
+                                        "type": "string",
+                                        "examples": [
+                                            "25"
+                                        ]
+                                    },
+                                    "y": {
+                                        "type": "string",
+                                        "examples": [
+                                            "40"
+                                        ]
+                                    },
+                                    "segments": {
+                                        "type": "string",
+                                        "examples": [
+                                            "4"
+                                        ]
+                                    },
+                                    "placement": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "tls": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "trs": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "tlp": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "trp": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    },
+                                    "brp": {
+                                        "type": "string",
+                                        "examples": [
+                                            "248"
+                                        ]
+                                    },
+                                    "blp": {
+                                        "type": "string",
+                                        "examples": [
+                                            "0"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "Segments",
+                                    "level",
+                                    "x",
+                                    "y",
+                                    "segments",
+                                    "placement",
+                                    "tls",
+                                    "trs",
+                                    "tlp",
+                                    "trp",
+                                    "brp",
+                                    "blp"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "floors",
+                        "walls"
+                    ]
+                },
+                "objects": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "guid": {
+                                "type": "string",
+                                "examples": [
+                                    "0x534564D5"
+                                ]
+                            },
+                            "level": {
+                                "type": "string",
+                                "examples": [
+                                    "0"
+                                ]
+                            },
+                            "x": {
+                                "type": "string",
+                                "examples": [
+                                    "-2048"
+                                ]
+                            },
+                            "y": {
+                                "type": "string",
+                                "examples": [
+                                    "-2048"
+                                ]
+                            },
+                            "dir": {
+                                "type": "string",
+                                "examples": [
+                                    "0"
+                                ]
+                            },
+                            "group": {
+                                "type": "string",
+                                "examples": [
+                                    "0"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "guid",
+                            "level",
+                            "x",
+                            "y",
+                            "dir",
+                            "group"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "size",
+                "category",
+                "world",
+                "objects"
+            ]
+        }
+    },
+    "required": [
+        "house"
+    ]
+}

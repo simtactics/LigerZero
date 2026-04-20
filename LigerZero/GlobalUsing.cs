@@ -5,3 +5,4 @@ global using Tomlyn;
 global using System.IO;
 global using System.Text.Json.Serialization;
 global using Env = System.Environment;
+global using Engine = twodog.Engine;

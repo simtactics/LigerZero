@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/godot,dotnetcore,visualstudio,visualstudiocode,rider
-# Edit at https://www.toptal.com/developers/gitignore?templates=godot,dotnetcore,visualstudio,visualstudiocode,rider
+# Created by https://www.toptal.com/developers/gitignore/api/godot,rider,dotnetcore,visualstudio,visualstudiocode,obsidian
+# Edit at https://www.toptal.com/developers/gitignore?templates=godot,rider,dotnetcore,visualstudio,visualstudiocode,obsidian
 
 ### DotnetCore ###
 # .NET Core build folders
@@ -26,6 +26,10 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+### Obsidian ###
+# config dir
+.obsidian/
 
 ### Rider ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -520,6 +524,7 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/godot,dotnetcore,visualstudio,visualstudiocode,rider
+# End of https://www.toptal.com/developers/gitignore/api/godot,rider,dotnetcore,visualstudio,visualstudiocode,obsidian
 
 **/*.toml
+*.pck

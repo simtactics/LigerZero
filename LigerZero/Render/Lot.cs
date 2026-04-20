@@ -6,7 +6,7 @@ public record Lot(
 );
 
 public record House(
-    [property: JsonPropertyName("size")]
+    [property : JsonPropertyName("size")]
     string Size,
     [property: JsonPropertyName("category")]
     string Category,
