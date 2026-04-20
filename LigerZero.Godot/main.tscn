@@ -21,20 +21,19 @@ texture = ExtResource("1_ig7tw")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=571400195]
+[node name="ScrollCtn" type="CenterContainer" parent="." unique_id=571400195]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -45.0
+offset_top = -23.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="CenterContainer" unique_id=490216998]
+[node name="ScrollTxt" type="Label" parent="ScrollCtn" unique_id=2065181250]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Hello from 2dog!"
+horizontal_alignment = 1
 
 [node name="LoginPanel" type="Panel" parent="." unique_id=845109502]
 layout_mode = 1

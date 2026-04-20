@@ -4,7 +4,7 @@ public class Soundtrack
 {
     private readonly GameMode _gameMode = GameMode.Load;
     private readonly IEnumerable<string> _mapMode = ["tsomap2_v2", "tsomap3", "tsomap4_v1"];
-    private readonly string _tsoLoc = Path.Combine(FindTSO.TSOPath, "TSOClient", "music");
+    private readonly string _tsoLoc = $"{LZConsts.TSO_DIR}/music";
 
     public Soundtrack(GameMode modes)
     {
@@ -14,20 +14,20 @@ public class Soundtrack
         {
             case GameMode.Create:
                 _gameMode = GameMode.Create;
-                _tsoLoc = Path.Combine(_tsoLoc, "create");
+                _tsoLoc = $"{_tsoLoc}/create";
                 break;
             default:
             case GameMode.Load:
                 _gameMode = GameMode.Load;
-                _tsoLoc = Path.Combine(_tsoLoc, "load");
+                _tsoLoc = $"{_tsoLoc}/load";
                 break;
             case GameMode.Map:
                 _gameMode = GameMode.Map;
-                _tsoLoc = Path.Combine(_tsoLoc, "map");
+                _tsoLoc = $"{_tsoLoc}/map";
                 break;
             case GameMode.Select:
                 _gameMode = GameMode.Select;
-                _tsoLoc = Path.Combine(_tsoLoc, "select");
+                _tsoLoc = $"{_tsoLoc}/select";
                 break;
         }
     }

@@ -16,21 +16,22 @@ public class SceneManger(Engine engine, string ver)
 
     public void Login()
     {
-        if (CurrentScene.Name != "Login")
-            return;
-
-        var config = LZConfig.LoadConfig;
-
         var login = CurrentScene;
-        var verLbl = login.GetNode<Label>("VerLbl");
+        var lzVer = login.GetNode<Label>("VerLbl");
         // var splash = scene.GetNode<TextureRect>("Splash");
-        // var alertTxt = scene.GetNode<Label>("AlertWin/AlertBox/AlertTxt");
-        var alertWin = login.GetNode<AcceptDialog>("AlertWin");
+        // var scrollTxt = login.GetNode<Label>("ScrollCtn/ScrollTxt");
+        var alertWin = login.GetNode<Window>("AlertWin");
 
         // Init scene
-        verLbl.Text = version;
+        lzVer.Text = $"v{version}";
 
-        // Path resolver needs lots of work, but at least one things works xD
-        if (!File.Exists(config.InstallDir)) alertWin.Show();
+        var dir = DirAccess.Open(LZConsts.TSO_DIR);
+        if (dir != null)
+        {
+            using var verFile = FileAccess.Open($"{LZConsts.TSO_DIR}/version", FileAccess.ModeFlags.Read);
+            var tsoVersion = verFile.GetAsText();
+            lzVer.Text = $"LZ v{version}{Env.NewLine}TSO v{tsoVersion}";
+        }
+        else { alertWin.Show(); }
     }
 }

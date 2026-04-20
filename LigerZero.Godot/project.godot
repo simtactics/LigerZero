@@ -14,6 +14,8 @@ custom_features="dotnet"
 
 config/name="LigerZero"
 run/main_scene="uid://dappxcrub2umi"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SimTactics/LigerZero"
 config/features=PackedStringArray("4.6", "C#")
 boot_splash/image="uid://c83cgya7vcf72"
 config/icon="uid://cnxke3l65wtxd"

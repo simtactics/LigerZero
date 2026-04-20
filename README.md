@@ -4,7 +4,7 @@ Liger Zero (or TSO LZ) is a Sims Online Client based on Godot that's powered by 
 
 ## To-do
 
-See [changelog](./ChangeLog.md).
+See [changelog](./docs/ChangeLog.md).
 
 - [ ] Prototype (Tokaido)
     - [x] Login window
