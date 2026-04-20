@@ -1,6 +1,3 @@
-using Godot;
-using twodog.xunit;
-
 namespace LigerZero.Tests;
 
 [Collection("GodotHeadless")]
@@ -11,16 +8,16 @@ public class BasicTests(GodotHeadlessFixture godot)
     {
         // Arrange
         var scene = GD.Load<PackedScene>("res://main.tscn");
-        
+
         // Act
         var instance = scene.Instantiate();
         godot.Tree.Root.AddChild(instance);
-        
+
         // Assert
         Assert.NotNull(instance);
         Assert.NotNull(instance.GetParent());
     }
-    
+
     [Fact]
     public void PhysicsIteration_Succeeds()
     {

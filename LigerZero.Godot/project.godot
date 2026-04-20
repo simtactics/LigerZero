@@ -13,16 +13,20 @@ custom_features="dotnet"
 [application]
 
 config/name="LigerZero"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://dappxcrub2umi"
 config/features=PackedStringArray("4.6", "C#")
 boot_splash/image="uid://c83cgya7vcf72"
 config/icon="uid://cnxke3l65wtxd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1024
+window/size/viewport_height=768
 
 [dotnet]
 
 project/assembly_name="LigerZero.Godot"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_layered_shader/plugin.cfg")

@@ -1,14 +1,16 @@
 namespace LigerZero;
 
 /// <summary>
-/// Automatically looks for The Sims Online.
+///     Automatically looks for The Sims Online.
 /// </summary>
 public static class FindTSO
 {
+    private const string clientDir = "TSOClient";
+
     /// <summary>
-    /// Detect the OS and return the correct platform ID.
+    ///     Detect the OS and return the correct platform ID.
     /// </summary>
-    static PlatformID DetectOS
+    private static PlatformID DetectOS
     {
         get
         {
@@ -20,7 +22,7 @@ public static class FindTSO
         }
     }
 
-    public static string TSOLocation
+    public static string TSOPath
     {
         get
         {
@@ -29,11 +31,11 @@ public static class FindTSO
                 default:
                 case PlatformID.Win32NT:
                     var progFiles = Env.GetFolderPath(Env.SpecialFolder.ProgramFilesX86);
-                    return Path.Combine(progFiles, "Maxis", "The Sims Online");
+                    return Path.Combine(progFiles, "Maxis", "The Sims Online", clientDir);
                 case PlatformID.Unix:
                 case PlatformID.MacOSX:
                     var usrDir = Env.GetFolderPath(Env.SpecialFolder.UserProfile);
-                    return Path.Combine(usrDir, "simsonline");
+                    return Path.Combine(usrDir, "simsonline", clientDir);
             }
         }
     }

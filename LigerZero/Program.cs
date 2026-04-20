@@ -1,37 +1,34 @@
 using Engine = twodog.Engine;
 
 // Create and start the Godot engine with your project
-const string version = $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
+const string version =
+    $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
 const string project = "LigerZero";
 using var engine = new Engine(project, Engine.ResolveProjectDir());
 using var godot = engine.Start();
 
 // Load main scene
-var scene = GD.Load<PackedScene>("res://main.tscn");
-var tree = engine.Tree.Root;
-var window = tree.GetWindow();
-var config = new LZConfig();
+var game = GD.Load<PackedScene>("res://main.tscn");
+engine.Tree.Root.AddChild(game.Instantiate());
+
+var scene = engine.Tree.CurrentScene;
+var verLbl = scene.GetNode<Label>("VerLbl");
+var alertWin = scene.GetNode<Window>("AlertWin");
+var win = scene.GetWindow();
+var cfg = new LZConfig();
 
 // Init scene
-tree.AddChild(scene.Instantiate());
-window.Size = new Vector2I(config.Height, config.Width);
+verLbl.Text = version;
+win.Size = new Vector2I(cfg.Height, cfg.Width); // I might have mixed up the X Y coordinates on this one.
 
 
-#if DEBUG
-window.Title = $"{project} {version}";
-#endif
-
-var tso = config.GameLocation;
-
-
-if (!File.Exists(tso))
-    GD.Print("Could not find The Sims Online!");
+// Path resolver need fixing, but at least one things works xD
+if (!File.Exists(cfg.InstallDir)) alertWin.Show();
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())
-{
     if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
         break;
-}
+
 
 Console.WriteLine("Shutting down...");
