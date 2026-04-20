@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dle6qv32ly0e0"
-path="res://.godot/imported/Pixie Point logo.png-dac4583973a12c7d862dfea78eb23b0b.ctex"
+uid="uid://c6bp8q8g1ha1d"
+path="res://.godot/imported/Preview (Variation B).png-e2ae0e568514c2331130481a78948622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixie Point logo.png"
-dest_files=["res://.godot/imported/Pixie Point logo.png-dac4583973a12c7d862dfea78eb23b0b.ctex"]
+source_file="res://sprites/city/Preview (Variation B).png"
+dest_files=["res://.godot/imported/Preview (Variation B).png-e2ae0e568514c2331130481a78948622.ctex"]
 
 [params]
 
