@@ -1,5 +1,4 @@
-using CommandLine;
-
+// Ignore VSCode if it complains about "ThisAssembly" not being found.
 const string version =
     $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
 
@@ -9,19 +8,11 @@ using var engine = new Engine(project, Engine.ResolveProjectDir());
 using var godot = engine.Start();
 var scene = new SceneManger(engine, version);
 
-Parser.Default.ParseArguments(args).WithParsed<Options>(o =>
-{
-    switch (o.Mode)
-    {
-        default:
-            scene.Login();
-            break;
-    }
-});
+scene.Login();
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())
-    if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Q)
+    if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape)
         break;
 
 

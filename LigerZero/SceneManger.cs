@@ -1,41 +1,36 @@
 namespace LigerZero;
 
-public class SceneManger
+public class SceneManger(Engine engine, string ver)
 {
-    private readonly LZConfig config = new();
-    private readonly Engine game;
-    private readonly string version;
+    private readonly Engine game = engine;
+    private readonly string version = ver;
 
-    public SceneManger(Engine engine, string ver)
+    public Node CurrentScene => game.Tree.CurrentScene;
+
+    public void ChangeScene(string scene)
     {
-        game = engine;
-        version = ver;
-    }
+        var change = ResourceLoader.Load<PackedScene>($"res://{scene}").Instantiate();
+        game.Tree.Root.AddChild(change);
 
-    private Node Instantiate(string path)
-    {
-        var scene = GD.Load<PackedScene>($"res://{path}");
-        game.Tree.Root.AddChild(scene.Instantiate());
-        var current = game.Tree.CurrentScene;
-        var win = current.GetWindow();
-
-        win.Size = new Vector2I(config.Height, config.Width); // I might have mixed up the X Y coordinates on this one.
-
-        return current;
     }
 
     public void Login()
     {
-        var scene = Instantiate("main.tscn");
-        var verLbl = scene.GetNode<Label>("VerLbl");
+        if (CurrentScene.Name != "Login")
+            return;
+
+        var config = LZConfig.LoadConfig;
+
+        var login = CurrentScene;
+        var verLbl = login.GetNode<Label>("VerLbl");
         // var splash = scene.GetNode<TextureRect>("Splash");
         // var alertTxt = scene.GetNode<Label>("AlertWin/AlertBox/AlertTxt");
-        var alertWin = scene.GetNode<Window>("AlertWin");
+        var alertWin = login.GetNode<AcceptDialog>("AlertWin");
 
         // Init scene
         verLbl.Text = version;
 
-        // Path resolver need fixing, but at least one things works xD
+        // Path resolver needs lots of work, but at least one things works xD
         if (!File.Exists(config.InstallDir)) alertWin.Show();
     }
 }
