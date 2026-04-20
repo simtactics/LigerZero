@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.109
+
+- Changed mouse cursor to something a bit more interesting.
+- New font that closely matched what I'm assuming TSO and The Sims used.
+
 ## 0.1.106
 
 - Liger Zero now checks for `TSOClient` in the user directory. If the directory is found, TSO's version number appears on the top right corner, directly below Liger Zero's.

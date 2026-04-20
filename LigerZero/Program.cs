@@ -10,11 +10,6 @@ var scene = new SceneManger(engine, version);
 
 scene.Login();
 
-using var tsoVersion = FileAccess.Open("user://TSOClient/version", FileAccess.ModeFlags.Read);
-var contents = tsoVersion.GetAsText();
-GD.Print(contents);
-
-
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())
