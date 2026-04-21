@@ -11,14 +11,17 @@ public class SceneManager(Engine engine, string ver)
         engine.Tree.ChangeSceneToFile(file);
     }
 
-    public Node Login()
+    public void Login()
     {
         var gameVer = $"v{version}";
-        var login = CurrentScene;
-        var gameVerLbl = login.GetNode<Label>("VerLbl");
-        var button = login.GetNode<Button>("LoginPanel/loginCtn/LoginBtn");
-        // var scrollTxt = login.GetNode<Label>("ScrollCtn/ScrollTxt");
-        var alertWin = login.GetNode<Window>("AlertWin");
+        var current = CurrentScene;
+        var gameVerLbl = current.GetNode<Label>("VerLbl");
+        var alertWin = current.GetNode<Window>("AlertWin");
+        var login = current.GetNode<Button>("LoginPanel/loginCtn/ButtonCtn/LoginBtn");
+        var cancel = current.GetNode<Button>("LoginPanel/loginCtn/ButtonCtn/CancelBtn");
+
+        login.Pressed += () => ChangeScene("res://scenes/map/map_menu.tscn");
+        cancel.Pressed += () => Env.Exit(Env.ExitCode);
 
         // Init scene
         gameVerLbl.Text = gameVer;
@@ -35,19 +38,5 @@ public class SceneManager(Engine engine, string ver)
         }
 
         GD.Print(gameVer);
-
-        return login;
-    }
-
-
-    public Node Map()
-    {
-        var map = CurrentScene;
-        var music = FileManager.LoadMP3($"{LZConsts.TSO_DIR}/music/modes/map/tsomap2_v2.mp3");
-        var soundtrack = map.GetNode<AudioStreamPlayer>("Soundtrack");
-        soundtrack.Stream = music;
-        soundtrack.Play();
-
-        return map;
     }
 }

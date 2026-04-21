@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.116
+
+- Redesigned the main/login scene to match The Sims Online's layout.
+- Naturally, the cancel button now works as well and just quits the game.
+
 ## 0.1.115
 
 - Pressing the login button now takes you to a dummy map view. If it finds TSO, then music from that mode will play.

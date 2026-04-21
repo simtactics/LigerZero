@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dappxcrub2umi"]
 
-[ext_resource type="Texture2D" uid="uid://c83cgya7vcf72" path="res://splash/tsosplash3restored.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://c83cgya7vcf72" path="res://splash/tsosplash3restored.png" id="1_o5qli"]
 
 [node name="Login" type="Control" unique_id=1844740379]
 layout_mode = 3
@@ -17,11 +17,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ig7tw")
+texture = ExtResource("1_o5qli")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="ScrollCtn" type="CenterContainer" parent="." unique_id=571400195]
+visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -39,13 +40,12 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.32578126
-anchor_top = 0.39722222
+anchor_top = 0.36328125
 anchor_right = 0.67578125
-anchor_bottom = 0.6180556
+anchor_bottom = 0.6180555
 offset_bottom = -3.0517578e-05
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="loginCtn" type="VBoxContainer" parent="LoginPanel" unique_id=2083043326]
@@ -59,10 +59,17 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="WelcomeLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1988598534]
+layout_mode = 2
+text = "Login to Sims Online"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="UnameLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1827727746]
 layout_mode = 2
-text = "Username"
+text = "Login Name:"
 
 [node name="UnameInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=544324592]
 layout_mode = 2
@@ -70,29 +77,37 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ServLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1079345103]
 layout_mode = 2
-text = "Server"
+text = "Server:"
 
 [node name="ServInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=62087650]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="LoginBtn" type="Button" parent="LoginPanel/loginCtn" unique_id=1713895927]
+[node name="ButtonCtn" type="HBoxContainer" parent="LoginPanel/loginCtn" unique_id=1151870856]
+layout_mode = 2
+alignment = 2
+
+[node name="LoginBtn" type="Button" parent="LoginPanel/loginCtn/ButtonCtn" unique_id=1713895927]
 layout_mode = 2
 text = "Login"
+
+[node name="CancelBtn" type="Button" parent="LoginPanel/loginCtn/ButtonCtn" unique_id=1049805623]
+layout_mode = 2
+text = "Canel"
 
 [node name="VerLbl" type="Label" parent="." unique_id=906710487]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.22167969
-anchor_top = 0.0013020834
-anchor_right = 0.98535156
-anchor_bottom = 0.03125
-grow_horizontal = 0
-text = "0.1.000"
-horizontal_alignment = 2
+anchor_left = 0.0146484375
+anchor_top = 0.88671875
+anchor_right = 0.13183594
+anchor_bottom = 0.97786456
+grow_horizontal = 2
+grow_vertical = 0
+text = "v0.1.000"
+vertical_alignment = 2
 autowrap_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="AlertWin" type="AcceptDialog" parent="." unique_id=1444826581]
 oversampling_override = 1.0
@@ -121,3 +136,44 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=1846249796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.68359375
+anchor_top = 0.79557294
+anchor_right = 0.96484375
+anchor_bottom = 0.96484375
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=355719843]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027777778
+anchor_top = 0.046153847
+anchor_right = 0.96875
+anchor_bottom = 0.9692308
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CurProgLbl" type="Label" parent="Panel/VBoxContainer" unique_id=1997627873]
+layout_mode = 2
+text = "Overall Progress"
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/VBoxContainer" unique_id=121661427]
+layout_mode = 2
+
+[node name="CurTaskLbl" type="Label" parent="Panel/VBoxContainer" unique_id=1907241036]
+layout_mode = 2
+text = "Current Task"
+
+[node name="TaskLbl" type="Label" parent="Panel/VBoxContainer" unique_id=1567227175]
+layout_mode = 2
+text = "Reticulating splines"
+horizontal_alignment = 1

@@ -7,13 +7,7 @@ using var engine = new Engine("Liger Zero", Engine.ResolveProjectDir());
 using var godot = engine.Start();
 var scene = new SceneManager(engine, version);
 
-var login = scene.Login();
-var button = login.GetNode<Button>("LoginPanel/loginCtn/LoginBtn");
-
-button.Pressed += () =>
-{
-    scene.ChangeScene("res://scenes/map/map_menu.tscn");
-};
+scene.Login();
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())
