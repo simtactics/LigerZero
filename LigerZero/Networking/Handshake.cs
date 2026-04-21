@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 
-namespace LigerZero;
+namespace LigerZero.Networking;
 
 public class Handshake(Engine engine, int Port)
 {
