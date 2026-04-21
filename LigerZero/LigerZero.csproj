@@ -9,17 +9,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="2dog" Version="0.1.23-pre" />
-        <PackageReference Include="CommandLineParser" Version="2.9.1" />
+        <PackageReference Include="2dog" Version="0.1.23-pre"/>
+        <PackageReference Include="CommandLineParser" Version="2.9.1"/>
         <PackageReference Include="GitInfo" Version="3.6.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Tomlyn" Version="2.3.0" />
+        <PackageReference Include="Tomlyn" Version="2.3.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../LigerZero.Godot/LigerZero.Godot.csproj" />
+        <ProjectReference Include="../LigerZero.Godot/LigerZero.Godot.csproj"/>
+        <ProjectReference Include="..\LigerZero.Common\LigerZero.Common.csproj"/>
     </ItemGroup>
 
     <!-- Godot project location -->
@@ -32,7 +33,7 @@
     <Target Name="RemoveDuplicateGodotAnalyzers" BeforeTargets="CoreCompile">
         <ItemGroup>
             <Analyzer Remove="@(Analyzer)"
-                Condition="$([System.String]::Copy('%(Analyzer.Identity)').Contains('Godot.SourceGenerators'))" />
+                      Condition="$([System.String]::Copy('%(Analyzer.Identity)').Contains('Godot.SourceGenerators'))"/>
         </ItemGroup>
     </Target>
 </Project>

@@ -3,10 +3,9 @@ using System.Net.Sockets;
 
 namespace LigerZero.Networking;
 
-public class Handshake(Engine engine, int Port)
+public class Handshake(Engine engine, int port)
 {
-
-    public Node Scene => engine.Tree.CurrentScene;
+    private Node Scene => engine.Tree.CurrentScene;
 
     // Source - https://stackoverflow.com/a/6803109
     // Posted by Mrchief, modified by community. See post 'Timeline' for change history
@@ -33,14 +32,14 @@ public class Handshake(Engine engine, int Port)
         var host = Dns.GetHostName();
         var ip = Dns.GetHostEntry(host);
         var client = new ENetMultiplayerPeer();
-        client.CreateClient(LocalIPAddress, Port);
+        client.CreateClient(LocalIPAddress, port);
         Scene.Multiplayer.MultiplayerPeer = client;
     }
 
     public void server()
     {
         var server = new ENetMultiplayerPeer();
-        server.CreateServer(Port);
+        server.CreateServer(port);
         Scene.Multiplayer.MultiplayerPeer = server;
 
     }

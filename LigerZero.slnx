@@ -5,6 +5,7 @@
         <File Path=".gitignore" />
         <File Path="README.md" />
     </Folder>
+    <Project Path="LigerZero.Common/LigerZero.Common.csproj" />
     <Project Path="LigerZero.Formats\LigerZero.Formats.csproj" />
   <Project Path="LigerZero.Godot/LigerZero.Godot.csproj" />
   <Project Path="LigerZero.Tests/LigerZero.Tests.csproj" />

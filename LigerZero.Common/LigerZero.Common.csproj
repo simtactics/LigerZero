@@ -8,9 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Remove="Formats\**" />
-        <EmbeddedResource Remove="Formats\**" />
-        <None Remove="Formats\**" />
+        <PackageReference Include="GodotSharp" Version="4.6.2"/>
     </ItemGroup>
 
 </Project>

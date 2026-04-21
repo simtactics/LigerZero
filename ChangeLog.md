@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.112
+
+- New `LigerZero.Common` library with a `FileManager` class for streamlined file I/O using Godot's `FileAccess` class.
+- FileManager current supports reading text files and buffer.
+
 ## 0.1.109
 
 - Changed mouse cursor to something a bit more interesting.
@@ -18,4 +23,4 @@
 
 ## 0.1 Tokaido
 
-This is just a basic prototype. I had already done some internal testing with 2dog a few months back and while it's still rough around edges, it is solid and at least gives me something visual to work with it.
+This is just a basic prototype. I had already done some internal testing with 2dog a few months back and while it's still rough around edges, it is solid enough to give me something to work with.

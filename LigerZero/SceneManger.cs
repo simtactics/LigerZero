@@ -29,11 +29,13 @@ public class SceneManger(Engine engine, string ver)
         var dir = DirAccess.Open(LZConsts.TSO_DIR);
         if (dir != null)
         {
-            using var verFile = FileAccess.Open($"{LZConsts.TSO_DIR}/version", FileAccess.ModeFlags.Read);
-            var tsoVersion = verFile.GetAsText();
+            var tsoVersion = FileManager.ReadTextFile($"{LZConsts.TSO_DIR}/version");
             lzVer.Text = $"LZ v{version}{Env.NewLine}TSO v{tsoVersion}";
         }
-        else { alertWin.Show(); }
+        else
+        {
+            alertWin.Show();
+        }
     }
 
     private void OnLoginBtnPresssed()
