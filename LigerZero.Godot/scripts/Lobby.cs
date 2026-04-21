@@ -28,8 +28,14 @@ internal partial class Lobby : Node // I.e. map view
     public override void _Ready()
     {
         Instance = this;
+
         Multiplayer.PeerConnected += OnPlayerConnected;
+        Multiplayer.PeerDisconnected += OnPlayerDisconnected;
+        Multiplayer.ConnectedToServer += OnConnectOk;
+        Multiplayer.ConnectionFailed += OnConnectionFail;
+        Multiplayer.ServerDisconnected += OnServerDisconnected;
     }
+
 
     private Error JoinGame(string ip = "")
     {
@@ -63,6 +69,13 @@ internal partial class Lobby : Node // I.e. map view
         _players.Clear();
     }
 
+    private void OnPlayerDisconnected(long Id)
+    {
+        Multiplayer.MultiplayerPeer = null;
+        EmitSignal(SignalName.ServerDisconnected, Id);
+    }
+
+
     // When the server decides to start the game from a scene
     // do RPC(Lobby.MethodName.LoadGame, filepath);
     [Rpc(CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
@@ -71,7 +84,15 @@ internal partial class Lobby : Node // I.e. map view
         GetTree().ChangeSceneToFile(scene);
     }
 
-    // Every peer will callthis when they have loaded the game scene.
+    [Rpc(CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    private void RegisterPlayer(Dictionary<string, string> newPlayerInfo)
+    {
+        var newPlayerId = Multiplayer.GetRemoteSenderId();
+        _players[newPlayerId] = newPlayerInfo;
+        EmitSignal(SignalName.PlayerConnected, newPlayerId, _playerInfo);
+    }
+
+    // Every peer will call this when they have loaded the game scene.
     private void PlayerLoaded()
     {
         if (!Multiplayer.IsServer()) return;
@@ -84,6 +105,26 @@ internal partial class Lobby : Node // I.e. map view
 
     private void OnPlayerConnected(long id)
     {
-        // RpcId(id, MethodName.RegisterPlayer, _playerInfo);
+        RpcId(id, MethodName.RegisterPlayer, _playerInfo);
     }
+
+    private void OnServerDisconnected()
+    {
+        Multiplayer.MultiplayerPeer = null;
+        _players.Clear();
+        EmitSignal(SignalName.ServerDisconnected);
+    }
+
+    private void OnConnectionFail()
+    {
+        Multiplayer.MultiplayerPeer = null;
+    }
+
+    private void OnConnectOk()
+    {
+        var peerId = Multiplayer.GetUniqueId();
+        _players[peerId] = _playerInfo;
+        EmitSignal(SignalName.PlayerConnected, peerId, _playerInfo);
+    }
+
 }
