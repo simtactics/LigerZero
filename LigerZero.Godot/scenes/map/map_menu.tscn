@@ -86,7 +86,6 @@ title = "Settings"
 initial_position = 3
 size = Vector2i(250, 150)
 current_screen = 0
-visible = true
 
 [node name="SettingsCtn" type="VBoxContainer" parent="SettingsDlg" unique_id=363600557]
 anchors_preset = -1
