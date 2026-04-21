@@ -1,0 +1,21 @@
+﻿using System.Text.Json.Serialization;
+
+namespace LigerZero.Formats.tsodata;
+
+public class TSODataField : TSODataObject
+{
+    public TSODataField(uint fieldID, TSODataFieldClassification classific, uint typeStrID)
+    {
+        ParentFile = TSODataImporter.Current;
+        NameID = fieldID;
+        Classification = classific;
+        TypeID = typeStrID;
+    }
+
+    public string TypeString => ParentFile.Strings[TypeID].Value;
+
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public TSODataFieldClassification Classification { get; set; }
+    [JsonIgnore]
+    protected uint TypeID { get;set; }
+}

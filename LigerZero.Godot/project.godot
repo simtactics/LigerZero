@@ -12,7 +12,7 @@ custom_features="dotnet"
 
 [application]
 
-config/name="LigerZero"
+config/name="Liger Zero"
 run/main_scene="uid://dappxcrub2umi"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SimTactics/LigerZero"

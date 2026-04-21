@@ -60,21 +60,25 @@ grow_vertical = 2
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="unameLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1827727746]
+[node name="UnameLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1827727746]
 layout_mode = 2
 text = "Username"
 
-[node name="unameInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=544324592]
+[node name="UnameInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=544324592]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="servLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1079345103]
+[node name="ServLbl" type="Label" parent="LoginPanel/loginCtn" unique_id=1079345103]
 layout_mode = 2
 text = "Server"
 
-[node name="servInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=62087650]
+[node name="ServInput" type="LineEdit" parent="LoginPanel/loginCtn" unique_id=62087650]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="LoginBtn" type="Button" parent="LoginPanel/loginCtn" unique_id=1713895927]
+layout_mode = 2
+text = "Login"
 
 [node name="VerLbl" type="Label" parent="." unique_id=906710487]
 layout_mode = 1
