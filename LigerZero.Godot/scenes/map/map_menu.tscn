@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dn6tnj72mfw2r"]
 
+[ext_resource type="Script" uid="uid://2hvc2ifddg6r" path="res://scripts/Map.cs" id="1_4isam"]
 [ext_resource type="PackedScene" uid="uid://bpmbiqewsir4a" path="res://scenes/map/map_view.tscn" id="1_fw6nu"]
 
 [node name="MapMenu" type="Control" unique_id=1316705891]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4isam")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=541616981]
 layout_mode = 1
@@ -18,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+metadata/_edit_lock_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=823981428]
 handle_input_locally = false
@@ -41,7 +44,6 @@ anchor_top = 0.0026041667
 anchor_right = 0.6152344
 anchor_bottom = 0.049479168
 grow_horizontal = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="CityNameLbl" type="Label" parent="NamePnl" unique_id=321842529]
 layout_mode = 1
@@ -55,10 +57,64 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="Panel" parent="." unique_id=735029740]
+[node name="MapPanel" type="Panel" parent="." unique_id=735029740]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_top = 628.0
 offset_right = 196.0
 grow_vertical = 2
+
+[node name="SettingsCtn" type="VBoxContainer" parent="MapPanel" unique_id=1410625190]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035714287
+anchor_top = 0.05
+anchor_right = 0.95408165
+anchor_bottom = 0.94285715
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsBtn" type="Button" parent="MapPanel/SettingsCtn" unique_id=393241659]
+layout_mode = 2
+text = "Settings"
+
+[node name="SettingsDlg" type="AcceptDialog" parent="." unique_id=694991358]
+oversampling_override = 1.0
+title = "Settings"
+initial_position = 3
+size = Vector2i(250, 150)
+current_screen = 0
+visible = true
+
+[node name="SettingsCtn" type="VBoxContainer" parent="SettingsDlg" unique_id=363600557]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.47
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicBtn" type="CheckButton" parent="SettingsDlg/SettingsCtn" unique_id=1471242495]
+layout_mode = 2
+button_pressed = true
+text = "Disable Music"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1507486125]
+
+[node name="StatusLbl" type="Label" parent="." unique_id=1037249206]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65722656
+anchor_top = 0.00390625
+anchor_right = 0.9951172
+anchor_bottom = 0.040364582
+grow_horizontal = 2
+text = "You are logged in."
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true

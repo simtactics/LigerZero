@@ -1,0 +1,44 @@
+{
+  "cities": [
+    {
+      "name": "Blazing Falls",
+      "id": 1,
+      "description": "Considered a land for those who are playful in spirit, we encourage fun-seekers to feel the heat of Blazing Falls! Miles and miles of warm tropical beaches, complimented by a smattering of \"brochure quality\" islands, seem unattainable, but are well within reach in this picturesque wonderland! Build your humble abode or blazing business by the sea, or for a change of pace, move in-land amongst the tropical green forests. A multitude of paradises, all in one city! Who wouldn't like to call this \"dreamscape\" home?",
+      "thumbnail": "cities/city_0001/thumbnail.bmp",
+      "heightmap": "cities/city_0001/elevation.bmp",
+      "vertexcolor": "cities/city_0001/vertexcolor.bmp"
+    },
+    {
+      "name": "Alphaville",
+      "id": 2,
+      "description": "If you consider yourself to be the industrious type, the good life begins in Alphaville! Come make beautiful Alphaville your home, where you can warm your feet on our sandy beaches, or cool off in our snow-capped mountains. The beautiful blue oceans beckon you to enter our world of seasonal splendor. Whether you are searching for an alpine retreat, or a coastline bungalow, there's something for everyone in Alphaville!",
+      "thumbnail": "cities/city_0002/thumbnail.bmp",
+      "heightmap": "cities/city_0002/elevation.bmp",
+      "vertexcolor": "cities/city_0002/vertexcolor.bmp"
+    },
+    {
+      "name": "Test Center",
+      "id": 3,
+      "description": "Welcome to the Test Center, where you can choose to live life in the fast lane with total unpredictability! This is where the newest technologies are tried and tested, blazing trails for the world of The Sims Online!",
+      "thumbnail": "cities/city_0003/thumbnail.bmp",
+      "heightmap": "cities/city_0003/elevation.bmp",
+      "vertexcolor": "cities/city_0003/vertexcolor.bmp"
+    },
+    {
+      "name": "Calvin's Creek",
+      "id": 16,
+      "description": "Welcome to the romantic Calvin's Creek! Tons of prime waterfront real estate lines this haven of tranquility. If you like cool water and lush Elysian fields, Calvin's Creek is the place for you to make your home. White sandy beaches are yours for the taking. Imagine a bedroom oceanic view and a sweeping, emerald back yard. This all could be yours in the city of Calvin's Creek.",
+      "thumbnail": "cities/city_0016/thumbnail.bmp",
+      "heightmap": "cities/city_0016/elevation.bmp",
+      "vertexcolor": "cities/city_0016/vertexcolor.bmp"
+    },
+    {
+      "name": "Pixie Point",
+      "id": 26,
+      "description": "You'll feel as though you have entered the ultimate land of fantasy as you nestle your unrestrained fancy in the tranquil surroundings of Pixie Point. Play amongst the peaks, plains and powder in the petite, populous paradise of Lewis Lagoon! Cool your toes in the snow covered highlands of the Hills of Ica or warm your body and soul at Pixie Dust Beach. Take control of your destiny! Produce the playground of your dreams at Pixie Point!",
+      "thumbnail": "cities/city_0026/thumbnail.bmp",
+      "heightmap": "cities/city_0026/elevation.bmp",
+      "vertexcolor": "cities/city_0026/vertexcolor.bmp"
+    }
+  ]
+}

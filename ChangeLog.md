@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.117
+
+- Setting menu in map view that allows toggling of music.
+
 ## 0.1.116
 
 - Redesigned the main/login scene to match The Sims Online's layout.
