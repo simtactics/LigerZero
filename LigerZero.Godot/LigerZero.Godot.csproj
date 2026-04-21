@@ -1,18 +1,10 @@
 <Project Sdk="Godot.NET.Sdk/4.6.2">
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <EnableDynamicLoading>true</EnableDynamicLoading>
-        <RollForward>LatestMajor</RollForward>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="GitInfo" Version="3.6.0">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\LigerZero.Common\LigerZero.Common.csproj" />
-    </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LigerZero.Common\LigerZero.Common.csproj" />
+  </ItemGroup>
 </Project>

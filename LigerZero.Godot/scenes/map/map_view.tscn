@@ -1,23 +1,14 @@
 [gd_scene format=3 uid="uid://bpmbiqewsir4a"]
 
 [ext_resource type="MeshLibrary" uid="uid://cth8koar4gj3" path="res://sprites/city/buildings.meshlib" id="1_gldc4"]
+[ext_resource type="Script" uid="uid://2hvc2ifddg6r" path="res://scripts/Map.cs" id="1_urblq"]
 [ext_resource type="MeshLibrary" uid="uid://sba0uo4nc207" path="res://sprites/city/path.meshlib" id="2_0cso3"]
-[ext_resource type="PackedScene" uid="uid://dn6tnj72mfw2r" path="res://map_menu.tscn" id="3_0cso3"]
 [ext_resource type="MeshLibrary" uid="uid://bc3ijtxsj4bex" path="res://sprites/city/trees.meshlib" id="3_2klcf"]
 
 [sub_resource type="Environment" id="Environment_0cso3"]
 
 [node name="Map" type="Node3D" unique_id=306158664]
-
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1298276913]
-
-[node name="MapMenu" parent="SubViewport" unique_id=1316705891 instance=ExtResource("3_0cso3")]
-
-[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1696293541]
-transform = Transform3D(-0.8114763, 0.24631034, -0.5299411, -0.045492306, 0.8774575, 0.47749227, 0.58261204, 0.4115819, -0.70083064, -12.918097, 13.274429, -16.30897)
-projection = 1
-current = true
-size = 6.607
+script = ExtResource("1_urblq")
 
 [node name="Buildings" type="GridMap" parent="." unique_id=1695737033]
 mesh_library = ExtResource("1_gldc4")
@@ -45,3 +36,6 @@ environment = SubResource("Environment_0cso3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1539368117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.113372, 11.643064)
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=501184226]
+volume_db = -5.0

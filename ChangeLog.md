@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.115
+
+- Pressing the login button now takes you to a dummy map view. If it finds TSO, then music from that mode will play.
+
 ## 0.1.112
 
 - New `LigerZero.Common` library with a `FileManager` class for streamlined file I/O using Godot's `FileAccess` class.

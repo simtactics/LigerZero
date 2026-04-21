@@ -5,9 +5,15 @@ const string version =
 // Create and start the Godot engine with your project
 using var engine = new Engine("Liger Zero", Engine.ResolveProjectDir());
 using var godot = engine.Start();
-var scene = new SceneManger(engine, version);
+var scene = new SceneManager(engine, version);
 
-scene.Login();
+var login = scene.Login();
+var button = login.GetNode<Button>("LoginPanel/loginCtn/LoginBtn");
+
+button.Pressed += () =>
+{
+    scene.ChangeScene("res://scenes/map/map_menu.tscn");
+};
 
 // Main game loop - runs until window closes or 'Q' is pressed
 while (!godot.Iteration())

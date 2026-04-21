@@ -1,4 +1,4 @@
-namespace LigerZero;
+namespace LigerZero.Common;
 
 
 public struct LZConsts
