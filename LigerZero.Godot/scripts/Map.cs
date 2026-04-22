@@ -11,10 +11,10 @@ public partial class Map : Control
 
 	private void MusicPlayer(bool isPlaying = true)
 	{
+		if (!FileManager.TSOExists) return;
+
 		const string song = $"{LZConsts.TSO_DIR}/music/modes/map/tsomap2_v2.mp3";
 		var audio = GetNode<AudioStreamPlayer>("Soundtrack");
-
-		if (!FileManager.TSOExists) return;
 
 		audio.Stream = FileManager.LoadMP3(song);
 
