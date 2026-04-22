@@ -1,7 +1,10 @@
 # Project Liger Zero
 
-Liger Zero (or TSO LZ) is an implementation of The Sims Online's client using on Godot and [2dog](https://github.com/outfox/2dog), a library that takes advantage of `libgodot` to reverse the workflow, letting .NET take control of the engine. You can still make use of GDScript or C# for scripting but this brings with it more advanced capabilities of .NET to Godot. Which is useful for both complex games like this or simple ones.
+Liger Zero (or TSO LZ) is a prototype aimed at reimplementing The Sims Online's client using Godot. In order to make this all work I'm using [2dog](https://github.com/outfox/2dog),  a library that uses `libgodot` in order to reverse the workflow, letting .NET take control of the engine. You can still make use of GDScript or C# for scripting but this brings with it more advanced capabilities of .NET to Godot. Which is useful for both complex games like this or simple ones.
 
+## LAN First
+
+Godot has a basic multiplayer framework that allows for Mesh networks and P2P play. Right now the core focus on this prototype is just to understand the networking APIs and get it set up by starting with a simple map view. Since 2dog runs as a console application, a headless LAN server is certainly possible.
 
 ## Quick Start
 

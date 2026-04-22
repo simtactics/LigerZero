@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dn6tnj72mfw2r"]
 
 [ext_resource type="Script" uid="uid://2hvc2ifddg6r" path="res://scripts/Map.cs" id="1_4isam"]
-[ext_resource type="PackedScene" uid="uid://bpmbiqewsir4a" path="res://scenes/map/map_view.tscn" id="1_fw6nu"]
+[ext_resource type="PackedScene" uid="uid://bpmbiqewsir4a" path="res://scenes/map/map.tscn" id="1_fw6nu"]
 
 [node name="MapMenu" type="Control" unique_id=1316705891]
 layout_mode = 3
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4isam")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=541616981]
+[node name="SubViewCtn" type="SubViewportContainer" parent="." unique_id=541616981]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,28 +22,28 @@ grow_vertical = 2
 stretch = true
 metadata/_edit_lock_ = true
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=823981428]
+[node name="SubViewport" type="SubViewport" parent="SubViewCtn" unique_id=823981428]
 handle_input_locally = false
 size = Vector2i(1024, 768)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1256985586]
-transform = Transform3D(-0.8114763, 0.24631034, -0.5299411, -0.045492306, 0.8774575, 0.47749227, 0.58261204, 0.4115819, -0.70083064, -14.224727, 13.274429, -21.016054)
+[node name="Camera3D" type="Camera3D" parent="SubViewCtn/SubViewport" unique_id=1256985586]
+transform = Transform3D(-0.63303477, 0.3444427, -0.6932721, -0.04549236, 0.8774575, 0.47749224, 0.77278554, 0.33380777, -0.5397916, -15.224727, 12.274429, -14.016054)
 keep_aspect = 0
 projection = 1
 current = true
-size = 15.953
+size = 7.075
 
-[node name="MapView" parent="SubViewportContainer/SubViewport" unique_id=306158664 instance=ExtResource("1_fw6nu")]
+[node name="MapView" parent="SubViewCtn/SubViewport" unique_id=306158664 instance=ExtResource("1_fw6nu")]
 
 [node name="NamePnl" type="Panel" parent="." unique_id=1565621511]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.45703125
-anchor_top = 0.0026041667
-anchor_right = 0.6152344
+anchor_left = 0.4248047
+anchor_right = 0.5830078
 anchor_bottom = 0.049479168
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CityNameLbl" type="Label" parent="NamePnl" unique_id=321842529]
 layout_mode = 1
@@ -54,8 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Bridgeport"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
+vertical_alignment = 1
 
 [node name="MapPanel" type="Panel" parent="." unique_id=735029740]
 layout_mode = 1
@@ -107,6 +106,7 @@ text = "Disable Music"
 [node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1507486125]
 
 [node name="StatusLbl" type="Label" parent="." unique_id=1037249206]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.65722656

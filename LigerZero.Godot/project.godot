@@ -24,7 +24,7 @@ config/icon="uid://cnxke3l65wtxd"
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
-mouse_cursor/custom_image="uid://cou4d2lntj1mx"
+mouse_cursor/custom_image="uid://64ag4aww824t"
 
 [dotnet]
 

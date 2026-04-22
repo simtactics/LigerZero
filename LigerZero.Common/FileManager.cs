@@ -6,7 +6,7 @@ public static class FileManager
     {
         get
         {
-            var dir = DirAccess.Open(LZConsts.TSO_DIR);
+            using var dir = DirAccess.Open(LZConsts.TSO_DIR);
             return dir != null;
         }
     }
@@ -19,19 +19,16 @@ public static class FileManager
         return sound;
     }
 
-    public static string ReadTextFile(string path)
+    public static ImageTexture LoadImage(string path)
+    {
+        var imgFile = Image.LoadFromFile(path);
+        return ImageTexture.CreateFromImage(imgFile);
+    }
+
+    public static string ReadText(string path)
     {
         using var file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
         var contents = file.GetAsText();
-
-        file.Close();
-        return contents;
-    }
-
-    public static byte[] ReadBuffer(string path, long length)
-    {
-        using var file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
-        var contents = file.GetBuffer(length);
 
         file.Close();
         return contents;

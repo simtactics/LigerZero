@@ -28,7 +28,7 @@ public class SceneManager(Engine engine, string ver)
 
         if (FileManager.TSOExists)
         {
-            var tsoVersion = FileManager.ReadTextFile($"{LZConsts.TSO_DIR}/version");
+            var tsoVersion = FileManager.ReadText($"{LZConsts.TSO_DIR}/version");
             gameVer = $"LZ v{version}{Env.NewLine}TSO v{tsoVersion}";
             gameVerLbl.Text = gameVer;
         }

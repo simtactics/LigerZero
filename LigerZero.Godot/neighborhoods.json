@@ -1,0 +1,86 @@
+[
+  {
+    "Name": "Klapaucius",
+    "X": "880",
+    "Y": "696",
+    "size": "4"
+  },
+  {
+    "Name": "Stratford",
+    "X": "952",
+    "Y": "958",
+    "size": "2"
+  },
+  {
+    "Name": "Eastern Heights",
+    "X": "1392",
+    "Y": "568",
+    "size": "2"
+  },
+  {
+    "Name": "Tar Pits",
+    "X": "792",
+    "Y": "868",
+    "size": "1"
+  },
+  {
+    "Name": "Liverwurst",
+    "X": "1252",
+    "Y": "868",
+    "size": "3"
+  },
+  {
+    "Name": "Object Land",
+    "X": "1102",
+    "Y": "878",
+    "size": "5"
+  },
+  {
+    "Name": "Stay Out!",
+    "X": "1102",
+    "Y": "900",
+    "size": "2"
+  },
+  {
+    "Name": "The Strip",
+    "X": "1232",
+    "Y": "688",
+    "size": "2"
+  },
+  {
+    "Name": "Northern Vista",
+    "X": "1034",
+    "Y": "282",
+    "size": "2"
+  },
+  {
+    "Name": "Westchester",
+    "X": "284",
+    "Y": "714",
+    "size": "5"
+  },
+  {
+    "Name": "Lover's Gate",
+    "X": "508",
+    "Y": "890",
+    "size": "3"
+  },
+  {
+    "Name": "Cape Fear",
+    "X": "1064",
+    "Y": "428",
+    "size": "3"
+  },
+  {
+    "Name": "Smog Town",
+    "X": "448",
+    "Y": "520",
+    "size": "2"
+  },
+  {
+    "Name": "Northern Plains",
+    "X": "788",
+    "Y": "396",
+    "size": "4"
+  }
+]

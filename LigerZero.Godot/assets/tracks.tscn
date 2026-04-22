@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dfcmuap6xym1k"]
+
+[ext_resource type="PackedScene" uid="uid://cgykgjy386jt1" path="res://assets/train/train-carriage-box.glb" id="1_o51af"]
+[ext_resource type="PackedScene" uid="uid://34bx4dyr3kes" path="res://assets/train/train-carriage-coal.glb" id="2_olwik"]
+[ext_resource type="PackedScene" uid="uid://brweucxl3xg8r" path="res://assets/train/train-carriage-container-blue.glb" id="3_61ejr"]
+[ext_resource type="PackedScene" uid="uid://cgfxnkg3s6kb7" path="res://assets/train/train-carriage-container-green.glb" id="4_c7tg3"]
+[ext_resource type="PackedScene" uid="uid://dq2qxdajq6w3q" path="res://assets/train/train-carriage-container-red.glb" id="5_al7o8"]
+[ext_resource type="PackedScene" uid="uid://dtnx521pl2ryr" path="res://assets/train/train-carriage-dirt.glb" id="6_bqio2"]
+[ext_resource type="PackedScene" uid="uid://bn55ulbap1pla" path="res://assets/train/train-carriage-flatbed-wood.glb" id="7_n6snl"]
+[ext_resource type="PackedScene" uid="uid://bgkj5pegox0t0" path="res://assets/train/train-carriage-flatbed.glb" id="8_g7vm5"]
+[ext_resource type="PackedScene" uid="uid://dvbxkceb48kk7" path="res://assets/train/train-carriage-lumber.glb" id="9_wp5aw"]
+[ext_resource type="PackedScene" uid="uid://r1m5t85nrcql" path="res://assets/train/train-carriage-tank-large.glb" id="10_04dkt"]
+[ext_resource type="PackedScene" uid="uid://tdm0hto5gilw" path="res://assets/train/train-carriage-tank.glb" id="11_nt3m4"]
+[ext_resource type="PackedScene" uid="uid://ce4kfy5g1sm2j" path="res://assets/train/train-carriage-wood.glb" id="12_najtm"]
+[ext_resource type="PackedScene" uid="uid://cdjc8cqh4q7ny" path="res://assets/train/train-connector.glb" id="13_7gbqg"]
+[ext_resource type="PackedScene" uid="uid://dq50h5fx2yavp" path="res://assets/train/train-diesel-a.glb" id="14_odvqy"]
+[ext_resource type="PackedScene" uid="uid://dxk6xqcgbrqit" path="res://assets/train/train-diesel-b.glb" id="15_m7faa"]
+[ext_resource type="PackedScene" uid="uid://d2xvdcrlhnl3c" path="res://assets/train/train-diesel-box-a.glb" id="16_0rtnk"]
+[ext_resource type="PackedScene" uid="uid://cqjju4exfj6ra" path="res://assets/train/train-diesel-box-b.glb" id="17_h6wye"]
+[ext_resource type="PackedScene" uid="uid://cv38gft1q38ae" path="res://assets/train/train-diesel-box-c.glb" id="18_pf1jg"]
+[ext_resource type="PackedScene" uid="uid://cc7t1805yo34e" path="res://assets/train/train-diesel-c.glb" id="19_korxn"]
+[ext_resource type="PackedScene" uid="uid://d36f1258p4ae2" path="res://assets/train/train-electric-bullet-a.glb" id="20_fg6fe"]
+[ext_resource type="PackedScene" uid="uid://xdepy8acve23" path="res://assets/train/train-electric-bullet-b.glb" id="21_2sa2o"]
+[ext_resource type="PackedScene" uid="uid://0oaka1oq8isw" path="res://assets/train/train-electric-bullet-c.glb" id="22_64bvv"]
+[ext_resource type="PackedScene" uid="uid://bllm0b3xvjoou" path="res://assets/train/train-electric-city-a.glb" id="23_071pa"]
+[ext_resource type="PackedScene" uid="uid://1fp3cxvmjpui" path="res://assets/train/train-electric-city-b.glb" id="24_cftj0"]
+[ext_resource type="PackedScene" uid="uid://n0emad30oypv" path="res://assets/train/train-electric-city-c.glb" id="25_7injb"]
+[ext_resource type="PackedScene" uid="uid://dorwiviwguxs5" path="res://assets/train/train-electric-double-a.glb" id="26_wom74"]
+[ext_resource type="PackedScene" uid="uid://ehpj8poj6qyt" path="res://assets/train/train-electric-double-b.glb" id="27_8lgyb"]
+[ext_resource type="PackedScene" uid="uid://bgmpo3gm1adve" path="res://assets/train/train-electric-double-c.glb" id="28_spdor"]
+[ext_resource type="PackedScene" uid="uid://uxw8xogyaqp1" path="res://assets/train/train-electric-square-a.glb" id="29_8ef7x"]
+[ext_resource type="PackedScene" uid="uid://bhe4ia3rw8lwb" path="res://assets/train/train-electric-square-b.glb" id="30_qw8b3"]
+[ext_resource type="PackedScene" uid="uid://b6afhyjlhb82s" path="res://assets/train/train-electric-square-c.glb" id="31_6x15r"]
+[ext_resource type="PackedScene" uid="uid://bri1lp7v1snyw" path="res://assets/train/train-electric-subway-a.glb" id="32_nhs7o"]
+[ext_resource type="PackedScene" uid="uid://c0h8qo3yn462k" path="res://assets/train/train-electric-subway-b.glb" id="33_7gh56"]
+[ext_resource type="PackedScene" uid="uid://cltg3cac4c4yo" path="res://assets/train/train-electric-subway-c.glb" id="34_e7tfm"]
+[ext_resource type="PackedScene" uid="uid://chy0knv5snuwt" path="res://assets/train/train-locomotive-a.glb" id="35_0hpty"]
+[ext_resource type="PackedScene" uid="uid://crygp5s6kimmh" path="res://assets/train/train-locomotive-b.glb" id="36_kdxaw"]
+[ext_resource type="PackedScene" uid="uid://2rm6ahbas0gg" path="res://assets/train/train-locomotive-c.glb" id="37_lcpg1"]
+[ext_resource type="PackedScene" uid="uid://b33ej5lrqjb77" path="res://assets/train/train-locomotive-passenger-a.glb" id="38_p02yv"]
+[ext_resource type="PackedScene" uid="uid://ccavmjn0ao8nx" path="res://assets/train/train-locomotive-passenger-b.glb" id="39_qc71v"]
+[ext_resource type="PackedScene" uid="uid://lolmclgymd5h" path="res://assets/train/train-tram-classic.glb" id="40_6ry2j"]
+[ext_resource type="PackedScene" uid="uid://b0vijcuy8ugrp" path="res://assets/train/train-tram-modern.glb" id="41_6eh37"]
+[ext_resource type="PackedScene" uid="uid://dn51c064eqbcm" path="res://assets/train/train-tram-round.glb" id="42_8hpa4"]
+
+[node name="Train" type="Node3D" unique_id=1277780308]
+
+[node name="train-carriage-box2" parent="." unique_id=754311159 instance=ExtResource("1_o51af")]
+
+[node name="train-carriage-coal2" parent="." unique_id=1948923550 instance=ExtResource("2_olwik")]
+
+[node name="train-carriage-container-blue2" parent="." unique_id=1747652180 instance=ExtResource("3_61ejr")]
+
+[node name="train-carriage-container-green2" parent="." unique_id=206993667 instance=ExtResource("4_c7tg3")]
+
+[node name="train-carriage-container-red2" parent="." unique_id=388525944 instance=ExtResource("5_al7o8")]
+
+[node name="train-carriage-dirt2" parent="." unique_id=1580304479 instance=ExtResource("6_bqio2")]
+
+[node name="train-carriage-flatbed-wood2" parent="." unique_id=1645086823 instance=ExtResource("7_n6snl")]
+
+[node name="train-carriage-flatbed2" parent="." unique_id=1702332380 instance=ExtResource("8_g7vm5")]
+
+[node name="train-carriage-lumber2" parent="." unique_id=464413969 instance=ExtResource("9_wp5aw")]
+
+[node name="train-carriage-tank-large2" parent="." unique_id=1356473313 instance=ExtResource("10_04dkt")]
+
+[node name="train-carriage-tank2" parent="." unique_id=122239987 instance=ExtResource("11_nt3m4")]
+
+[node name="train-carriage-wood2" parent="." unique_id=1364178454 instance=ExtResource("12_najtm")]
+
+[node name="train-connector2" parent="." unique_id=1389729041 instance=ExtResource("13_7gbqg")]
+
+[node name="train-diesel-a2" parent="." unique_id=620301817 instance=ExtResource("14_odvqy")]
+
+[node name="train-diesel-b2" parent="." unique_id=425060850 instance=ExtResource("15_m7faa")]
+
+[node name="train-diesel-box-a2" parent="." unique_id=673582189 instance=ExtResource("16_0rtnk")]
+
+[node name="train-diesel-box-b2" parent="." unique_id=2113874241 instance=ExtResource("17_h6wye")]
+
+[node name="train-diesel-box-c2" parent="." unique_id=1472325965 instance=ExtResource("18_pf1jg")]
+
+[node name="train-diesel-c2" parent="." unique_id=1915754541 instance=ExtResource("19_korxn")]
+
+[node name="train-electric-bullet-a2" parent="." unique_id=994892494 instance=ExtResource("20_fg6fe")]
+
+[node name="train-electric-bullet-b2" parent="." unique_id=1122688304 instance=ExtResource("21_2sa2o")]
+
+[node name="train-electric-bullet-c2" parent="." unique_id=2103960133 instance=ExtResource("22_64bvv")]
+
+[node name="train-electric-city-a2" parent="." unique_id=1028382856 instance=ExtResource("23_071pa")]
+
+[node name="train-electric-city-b2" parent="." unique_id=363036667 instance=ExtResource("24_cftj0")]
+
+[node name="train-electric-city-c2" parent="." unique_id=1496706798 instance=ExtResource("25_7injb")]
+
+[node name="train-electric-double-a2" parent="." unique_id=1556788700 instance=ExtResource("26_wom74")]
+
+[node name="train-electric-double-b2" parent="." unique_id=985570245 instance=ExtResource("27_8lgyb")]
+
+[node name="train-electric-double-c2" parent="." unique_id=1249169835 instance=ExtResource("28_spdor")]
+
+[node name="train-electric-square-a2" parent="." unique_id=375434274 instance=ExtResource("29_8ef7x")]
+
+[node name="train-electric-square-b2" parent="." unique_id=66558808 instance=ExtResource("30_qw8b3")]
+
+[node name="train-electric-square-c2" parent="." unique_id=1782361072 instance=ExtResource("31_6x15r")]
+
+[node name="train-electric-subway-a2" parent="." unique_id=155527330 instance=ExtResource("32_nhs7o")]
+
+[node name="train-electric-subway-b2" parent="." unique_id=1617783623 instance=ExtResource("33_7gh56")]
+
+[node name="train-electric-subway-c2" parent="." unique_id=84148679 instance=ExtResource("34_e7tfm")]
+
+[node name="train-locomotive-a2" parent="." unique_id=1926534522 instance=ExtResource("35_0hpty")]
+
+[node name="train-locomotive-b2" parent="." unique_id=1763308360 instance=ExtResource("36_kdxaw")]
+
+[node name="train-locomotive-c2" parent="." unique_id=1303072389 instance=ExtResource("37_lcpg1")]
+
+[node name="train-locomotive-passenger-a2" parent="." unique_id=724155125 instance=ExtResource("38_p02yv")]
+
+[node name="train-locomotive-passenger-b2" parent="." unique_id=812847150 instance=ExtResource("39_qc71v")]
+
+[node name="train-tram-classic2" parent="." unique_id=1505311032 instance=ExtResource("40_6ry2j")]
+
+[node name="train-tram-modern2" parent="." unique_id=1523556320 instance=ExtResource("41_6eh37")]
+
+[node name="train-tram-round2" parent="." unique_id=484366125 instance=ExtResource("42_8hpa4")]

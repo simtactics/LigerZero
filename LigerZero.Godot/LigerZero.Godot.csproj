@@ -9,5 +9,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="cities.json"/>
+        <Content Include="neighborhoods.json"/>
     </ItemGroup>
 </Project>

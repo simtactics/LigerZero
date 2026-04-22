@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.119
+
+- Changed mouse cursor
+- Made the map scenery just a little more interesting by adding railway tracks and tram
+
 ## 0.1.117
 
 - Setting menu in map view that allows toggling of music.

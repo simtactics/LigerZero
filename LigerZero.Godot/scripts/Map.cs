@@ -1,18 +1,25 @@
 public partial class Map : Control
 {
+	private readonly string[] _mapMode =
+	[
+		$"{LZConsts.TSO_DIR}/music/modes/map/tsomap2_v2.mp3",
+		$"{LZConsts.TSO_DIR}/music/modes/map/tsomap3.mp3",
+		$"{LZConsts.TSO_DIR}/music/modes/map/tsomap4_v1.mp3"
+	];
+
 	private bool _isMusicPlaying;
 
 	private void MusicPlayer(bool isPlaying = true)
 	{
 		const string song = $"{LZConsts.TSO_DIR}/music/modes/map/tsomap2_v2.mp3";
-		var soundtrack = GetNode<AudioStreamPlayer>("Soundtrack");
+		var audio = GetNode<AudioStreamPlayer>("Soundtrack");
 
-		if (!FileAccess.FileExists(song)) return;
-		var mp3 = FileManager.LoadMP3(song);
-		soundtrack.Stream = mp3;
+		if (!FileManager.TSOExists) return;
 
-		if (isPlaying) soundtrack.Play();
-		else soundtrack.Stop();
+		audio.Stream = FileManager.LoadMP3(song);
+
+		if (isPlaying) audio.Play();
+		else audio.Stop();
 	}
 
 	public override void _Ready()

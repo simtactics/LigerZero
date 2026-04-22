@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dappxcrub2umi"]
 
-[ext_resource type="Texture2D" uid="uid://c83cgya7vcf72" path="res://splash/tsosplash3restored.png" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://c83cgya7vcf72" path="res://assets/splash/tsosplash3restored.png" id="1_o5qli"]
 
 [node name="Login" type="Control" unique_id=1844740379]
 layout_mode = 3
