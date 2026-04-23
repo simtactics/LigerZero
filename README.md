@@ -34,7 +34,7 @@ See [changelog](./ChangeLog.md).
 
 ## Declaimer
 
-The Sims trademarks are the property of Electronic Arts Inc. and its licensors. Game content and materials copyright Electronic Arts Inc. and its licensors. All rights reserved.
+Liger Zero is not in any way affiliated with Electronic Arts. The Sims trademarks are the property of Electronic Arts Inc. and its licensors.
 
 ## License
 
