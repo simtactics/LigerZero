@@ -1,0 +1,24 @@
+{
+  "MessageList": {
+    "avatarID": "870",
+    "Message": {
+      "id": "41",
+      "type": "3",
+      "read": "0"
+    },
+    "Date": {
+      "Year": "1969",
+      "Month": "12",
+      "Day": "31"
+    },
+    "Time": {
+      "Hour": "16",
+      "Minute": "",
+      "Second": "0"
+    },
+    "SenderID": "870",
+    "SenderName": "Blazej",
+    "Subject": "Just Testing",
+    "MessageText": "All Went Well"
+  }
+}

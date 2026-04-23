@@ -1,226 +1,69 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Generated Schema",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "inbox",
     "type": "object",
     "properties": {
-        "house": {
+        "MessageList": {
             "type": "object",
             "properties": {
-                "size": {
-                    "type": "string",
-                    "examples": [
-                        "64"
-                    ]
+                "avatarID": {
+                    "type": "string"
                 },
-                "category": {
-                    "type": "string",
-                    "examples": [
-                        "0"
-                    ]
-                },
-                "world": {
+                "Message": {
                     "type": "object",
                     "properties": {
-                        "floors": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "level": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "x": {
-                                        "type": "string",
-                                        "examples": [
-                                            "1"
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "string",
-                                        "examples": [
-                                            "58"
-                                        ]
-                                    },
-                                    "value": {
-                                        "type": "string",
-                                        "examples": [
-                                            "9"
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "level",
-                                    "x",
-                                    "y",
-                                    "value"
-                                ]
-                            }
+                        "id": {
+                            "type": "string"
                         },
-                        "walls": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "Segments": {
-                                        "type": "string",
-                                        "examples": [
-                                            "BottomRight"
-                                        ]
-                                    },
-                                    "level": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "x": {
-                                        "type": "string",
-                                        "examples": [
-                                            "25"
-                                        ]
-                                    },
-                                    "y": {
-                                        "type": "string",
-                                        "examples": [
-                                            "40"
-                                        ]
-                                    },
-                                    "segments": {
-                                        "type": "string",
-                                        "examples": [
-                                            "4"
-                                        ]
-                                    },
-                                    "placement": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "tls": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "trs": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "tlp": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "trp": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    },
-                                    "brp": {
-                                        "type": "string",
-                                        "examples": [
-                                            "248"
-                                        ]
-                                    },
-                                    "blp": {
-                                        "type": "string",
-                                        "examples": [
-                                            "0"
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "Segments",
-                                    "level",
-                                    "x",
-                                    "y",
-                                    "segments",
-                                    "placement",
-                                    "tls",
-                                    "trs",
-                                    "tlp",
-                                    "trp",
-                                    "brp",
-                                    "blp"
-                                ]
-                            }
+                        "type": {
+                            "type": "string"
+                        },
+                        "read": {
+                            "type": "string"
                         }
-                    },
-                    "required": [
-                        "floors",
-                        "walls"
-                    ]
-                },
-                "objects": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "guid": {
-                                "type": "string",
-                                "examples": [
-                                    "0x534564D5"
-                                ]
-                            },
-                            "level": {
-                                "type": "string",
-                                "examples": [
-                                    "0"
-                                ]
-                            },
-                            "x": {
-                                "type": "string",
-                                "examples": [
-                                    "-2048"
-                                ]
-                            },
-                            "y": {
-                                "type": "string",
-                                "examples": [
-                                    "-2048"
-                                ]
-                            },
-                            "dir": {
-                                "type": "string",
-                                "examples": [
-                                    "0"
-                                ]
-                            },
-                            "group": {
-                                "type": "string",
-                                "examples": [
-                                    "0"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "guid",
-                            "level",
-                            "x",
-                            "y",
-                            "dir",
-                            "group"
-                        ]
                     }
+                },
+                "Date": {
+                    "type": "object",
+                    "properties": {
+                        "Year": {
+                            "type": "string"
+                        },
+                        "Month": {
+                            "type": "string"
+                        },
+                        "Day": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "Time": {
+                    "type": "object",
+                    "properties": {
+                        "Hour": {
+                            "type": "string"
+                        },
+                        "Minute": {
+                            "type": "string"
+                        },
+                        "Second": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "SenderID": {
+                    "type": "string"
+                },
+                "SenderName": {
+                    "type": "string"
+                },
+                "Subject": {
+                    "type": "string"
+                },
+                "MessageText": {
+                    "type": "string"
                 }
-            },
-            "required": [
-                "size",
-                "category",
-                "world",
-                "objects"
-            ]
+            }
         }
-    },
-    "required": [
-        "house"
-    ]
+    }
 }

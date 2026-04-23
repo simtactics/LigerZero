@@ -27,10 +27,13 @@ public static class FileManager
 
     public static string ReadText(string path)
     {
+        if (!FileAccess.FileExists(path)) return string.Empty;
+
         using var file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
         var contents = file.GetAsText();
 
         file.Close();
-        return contents;
+
+        return string.IsNullOrEmpty(contents) ? string.Empty : contents;
     }
 }

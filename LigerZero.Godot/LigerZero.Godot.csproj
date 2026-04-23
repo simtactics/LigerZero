@@ -9,6 +9,8 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="cities.json"/>
+        <Content Include="inbox.json"/>
+        <Content Include="login.toml"/>
         <Content Include="neighborhoods.json"/>
     </ItemGroup>
 </Project>

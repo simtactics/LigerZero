@@ -11,7 +11,9 @@ Godot has a basic multiplayer framework that allows for Mesh networks and P2P pl
 ### Prerequisites
 
 - .NET 8 or later
-- [Godot Mono](https://godotengine.org/)
+- [Godot (.NET)](https://godotengine.org/) 
+
+Supported platforms: `win-x64`, `linux-x64`, and `osx-arm64`.
 
 ### Where to Put TSO
 
@@ -20,16 +22,6 @@ Whether you are playing or contributing to Liger Zero, in order for the game to 
 - Windows: `%APPDATA%\SimTactics\LigerZero`
 - macOS: `~/Library/Application Support/SimTactics/LigerZero`
 - Linux: `~/.local/share/SimTactics/LigerZero`
-
-## Platform Support
-
-|         | Version                   | x64 | arm64 |
-| ------- | ------------------------- | --- | ----- |
-| macOS   | 26, 15, 14                | ❌   | ✅     |
-| Ubuntu  | 25.10, 24.04, 22.04       | ✅   | ❌     |
-| Fedora  | 43, 42                    | ✅   | ❌     |
-| Windows | 10 21H2, 11 26H1, 11 25H2 | ✅   | ❌     |
-| Debian  | 13, 12                    | ✅   | ❌     |
 
 ## To-Do
 
@@ -40,6 +32,9 @@ See [changelog](./ChangeLog.md).
     - [ ] Lobby
     - [ ] Chat
 
+## Declaimer
+
+The Sims trademarks are the property of Electronic Arts Inc. and its licensors. Game content and materials copyright Electronic Arts Inc. and its licensors. All rights reserved.
 
 ## License
 

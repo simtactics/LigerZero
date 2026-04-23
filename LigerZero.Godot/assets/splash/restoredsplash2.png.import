@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxke3l65wtxd"
-path="res://.godot/imported/nso-logo.png-43ba2a47fc7ecc2b3b2a5a0110de3145.ctex"
+uid="uid://co1fjb22qraki"
+path="res://.godot/imported/restoredsplash2.png-33a402d3337f67a797b98a1957c19568.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nso-logo.png"
-dest_files=["res://.godot/imported/nso-logo.png-43ba2a47fc7ecc2b3b2a5a0110de3145.ctex"]
+source_file="res://assets/splash/restoredsplash2.png"
+dest_files=["res://.godot/imported/restoredsplash2.png-33a402d3337f67a797b98a1957c19568.ctex"]
 
 [params]
 

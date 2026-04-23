@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.121
+
+- Removed trademarked logo from fan site kit with something generic.
+- If `login.toml` exists, auto populate Login Name and Server with their respective info.
+
 ## 0.1.119
 
 - Changed mouse cursor
